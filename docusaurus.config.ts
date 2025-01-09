@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'coolha-com', // Usually your GitHub org/user name.
+  projectName: 'docs.coolha.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -33,14 +33,14 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        docs:  {
+            sidebarPath: './sidebars.ts',
+            editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            path: "docs",
+            routeBasePath: "/",
+            showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -66,7 +66,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+/*     docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    }, */
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: '',
@@ -76,85 +81,55 @@ const config: Config = {
       },
       items: [
         
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        /* {to: '/blog', label: 'Blog', position: 'left'}, */
+        { type: 'doc',docId: 'intro', label: 'Docs',position: 'left',},
+        { type: "doc",docId: 'intro',docsPluginId:'coolha', label: 'Coolha', position: 'left'},
+        { type: "doc",docId: 'intro',docsPluginId:'shop', label: 'Shop', position: 'left'},
+        { type: "doc",docId: 'intro',docsPluginId:'community', label: 'Community', position: 'left'},
+        {to: 'showcase', label: 'Showcase', position: 'left'},
+        {to: 'blog', label: 'Blog', position: 'left'},
+        
+        
+       /*  { type: 'docsVersionDropdown',  }, */
+        {href: 'https://link3.to/coolha', label: 'Connect', position: 'right'},
         {type: 'localeDropdown', position:'right' },
       ],
       
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'link',
-          items: [
-            {
-              label: 'Coolha',
-              href: 'https://coolha.com',
-            },
-            {
-              label:'About',
-              href:'https://about.coolha.com',
-            },
-            {
-              label:'Link3.to',
-              href:'https://Link3.to/coolha',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-
-            {
-              label: 'Lens',
-              href: 'https://hey.xyz/u/coolha',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/coolha_com',
-            },
-            {
-              label: 'Github',
-              href: 'https://github.com/coolha-com',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-
-            {
-              label: 'Mirror Blog',
-              href: 'https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A',
-            },
-            {
-              label: 'Guild',
-              href: 'https://guild.xyz/coolha',
-            },
-            {
-              label:'Snapshot DAO',
-              href:'https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1',
-            },
-            {
-              label:'Zora.co',
-              href:'https://zora.co/@coolha',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Coolha`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./1community.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'coolha',
+        path: 'coolha',
+        routeBasePath: 'coolha',
+        sidebarPath: require.resolve('./2coolha.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'shop',
+        path: 'shop',
+        routeBasePath: 'shop',
+        sidebarPath: require.resolve('./3shop.js'),
+      },
+    ],
+  ],
 };
 
 export default config;
