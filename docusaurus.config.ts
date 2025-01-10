@@ -1,12 +1,11 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'Coolha Docs',
-  tagline: 'Cool',
+  tagline: '为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务。',
   favicon: '/logo.png',
 
   // Set the production url of your site here
@@ -27,8 +26,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en','zh-Hans','fr'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans','zh-Hant','en'],
   },
 
   presets: [
@@ -37,12 +36,13 @@ const config: Config = {
       {
         docs:  {
             sidebarPath: './sidebars.ts',
-            editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            editUrl:'https://github.com/coolha-com/docs.coolha.com/tree/main/packages/create-docusaurus/templates/shared/',
             path: "docs",
             routeBasePath: "/",
             showLastUpdateTime: true,
         },
-        blog: {
+        blog:false,
+/*         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -56,7 +56,7 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
-        },
+        }, */
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -76,21 +76,21 @@ const config: Config = {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Coolha Docs Logo',
         src: '/logo.png',
       },
       items: [
         
-        { type: 'doc',docId: 'intro', label: 'Docs',position: 'left',},
-        { type: "doc",docId: 'intro',docsPluginId:'coolha', label: 'Coolha', position: 'left'},
-        { type: "doc",docId: 'intro',docsPluginId:'shop', label: 'Shop', position: 'left'},
-        { type: "doc",docId: 'intro',docsPluginId:'community', label: 'Community', position: 'left'},
-        {to: 'showcase', label: 'Showcase', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { type: 'doc',docId: 'intro', label: '文档',position: 'left',},
+        { type: "doc",docId: 'intro',docsPluginId:'apps', label: '应用程序', position: 'left'},
+        { type: "doc",docId: 'intro',docsPluginId:'community', label: '社区', position: 'left'},
+        /* {to: 'showcase', label: 'Showcase', position: 'left'}, */
+        /* {to: 'blog', label: 'Blog', position: 'left'}, */
+        {href: 'https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A', label: '博客', position: 'left'},
         
         
-       /*  { type: 'docsVersionDropdown',  }, */
-        {href: 'https://link3.to/coolha', label: 'Connect', position: 'right'},
+       /*  { type: 'docsVersionDropdown',  }, */ //添加版本下拉列表
+        {href: 'https://link3.to/coolha', label: '联系', position: 'right'},
         {type: 'localeDropdown', position:'right' },
       ],
       
@@ -105,28 +105,19 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'apps',
+        path: 'apps',
+        routeBasePath: 'apps',
+        sidebarPath: require.resolve('./sidebars.ts'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'community',
         path: 'community',
         routeBasePath: 'community',
-        sidebarPath: require.resolve('./1community.js'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'coolha',
-        path: 'coolha',
-        routeBasePath: 'coolha',
-        sidebarPath: require.resolve('./2coolha.js'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'shop',
-        path: 'shop',
-        routeBasePath: 'shop',
-        sidebarPath: require.resolve('./3shop.js'),
+        sidebarPath: require.resolve('./sidebars.ts'),
       },
     ],
   ],

@@ -1,41 +1,68 @@
-# Website
-
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
-### Installation
-
+创建文档版本
 ```
-$ yarn
+npm run docusaurus docs:version 1.0
 ```
 
-### Local Development
-
+翻译文档
 ```
-$ yarn start
-```
+mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
+启动您的本地化站点
 ```
-$ USE_SSH=true yarn deploy
+npm run start -- --locale zh-Hans
 ```
 
-Not using SSH:
 
+## en
+
+docs
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+mkdir -p i18n/en/docusaurus-plugin-content-docs/current
+
+cp -r docs/** i18n/en/docusaurus-plugin-content-docs/current
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+apps
+```
+mkdir -p i18n/en/docusaurus-plugin-content-docs-apps/current
+
+cp -r apps/** i18n/en/docusaurus-plugin-content-docs-apps/current
+```
+
+community
+```
+mkdir -p i18n/en/docusaurus-plugin-content-docs-community/current
+
+cp -r community/** i18n/en/docusaurus-plugin-content-docs-community/current
+```
+
+## zh-Hant
+
+
+docs
+```
+mkdir -p i18n/zh-Hant/docusaurus-plugin-content-docs/current
+
+cp -r docs/** i18n/zh-Hant/docusaurus-plugin-content-docs/current
+```
+
+
+apps
+```
+mkdir -p i18n/zh-Hant/docusaurus-plugin-content-docs-apps/current
+
+cp -r apps/** i18n/zh-Hant/docusaurus-plugin-content-docs-apps/current
+```
+
+community
+```
+mkdir -p i18n/zh-Hant/docusaurus-plugin-content-docs-community/current
+
+cp -r community/** i18n/zh-Hant/docusaurus-plugin-content-docs-community/current
+```
+
+

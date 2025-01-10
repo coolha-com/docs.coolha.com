@@ -2,46 +2,17 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 介绍
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## 什么是 Coolha ?
 
-## Getting Started
+Coolha 是基于 **[Lens Protocol](https://www.lens.xyz)** 开发的去中心化社交应用，借助 **[以太坊](https://ethereum.org/)** 上的可扩展社交网络 **[Lens Network](https://www.lens.xyz)** ，由 **[ZKsync](https://zksync.io/)** 和 **[Avail](https://www.availproject.org/)** 提供支持。
 
-Get started by **creating a new site**.
+为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
+## Coolha 各个主体之间的关系
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
++ **[Coolha DApps↗](https://coolha.com)** 是运行在区块链网络上的应用程序,
++ **[Coolha DAO↗](https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1)** 用于 Coolha DApps 的治理，由社区 `Coolha Community` 运营
++ **[Coolha Studio↗](https://about.coolha.com/about_us)** 是开发智能合约和应用程序的主要技术服务团队

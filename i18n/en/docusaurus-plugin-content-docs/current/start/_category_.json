@@ -1,0 +1,8 @@
+{
+  "label": "start",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Get started learning"
+  }
+}
