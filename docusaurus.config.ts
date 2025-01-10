@@ -18,7 +18,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'coolha-com', // Usually your GitHub org/user name.
   projectName: 'docs.coolha.com', // Usually your repo name.
-
+  deploymentBranch:'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -36,7 +36,7 @@ const config: Config = {
       {
         docs:  {
             sidebarPath: './sidebars.ts',
-            editUrl:'https://github.com/coolha-com/docs.coolha.com/tree/main/packages/create-docusaurus/templates/shared/',
+            editUrl:'https://github.com/coolha-com/docs.coolha.com//edit/main/',
             path: "docs",
             routeBasePath: "/",
             showLastUpdateTime: true,
