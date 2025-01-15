@@ -1,3 +1,9 @@
+部署gh-pages
+```
+$env:GIT_USER="coolha-com"
+npm run deploy
+```
+
 创建文档版本
 ```
 npm run docusaurus docs:version 1.0
@@ -40,6 +46,11 @@ mkdir -p i18n/en/docusaurus-plugin-content-docs-community/current
 cp -r community/** i18n/en/docusaurus-plugin-content-docs-community/current
 ```
 
+界面主题
+```
+ npm run write-translations -- --locale en    
+```
+
 ## zh-Hant
 
 
@@ -65,4 +76,8 @@ mkdir -p i18n/zh-Hant/docusaurus-plugin-content-docs-community/current
 cp -r community/** i18n/zh-Hant/docusaurus-plugin-content-docs-community/current
 ```
 
+界面主题
+```
+ npm run write-translations -- --locale zh-Hant    
+```
 

@@ -82,7 +82,7 @@ const config: Config = {
       items: [
         
         { type: 'doc',docId: 'intro', label: '文档',position: 'left',},
-        { type: "doc",docId: 'intro',docsPluginId:'apps', label: '应用程序', position: 'left'},
+        { type: "doc",docId: 'intro',docsPluginId:'apps', label: '应用', position: 'left'},
         { type: "doc",docId: 'intro',docsPluginId:'community', label: '社区', position: 'left'},
         /* {to: 'showcase', label: 'Showcase', position: 'left'}, */
         /* {to: 'blog', label: 'Blog', position: 'left'}, */

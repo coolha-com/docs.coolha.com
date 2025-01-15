@@ -4,23 +4,23 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.文档": {
-    "message": "Docs",
+    "message": "文档",
     "description": "Navbar item with label 文档"
   },
   "item.label.应用": {
-    "message": "Apps",
+    "message": "应用",
     "description": "Navbar item with label 应用"
   },
   "item.label.社区": {
-    "message": "Community",
+    "message": "社区",
     "description": "Navbar item with label 社区"
   },
   "item.label.博客": {
-    "message": "Blog",
+    "message": "博客",
     "description": "Navbar item with label 博客"
   },
   "item.label.联系": {
-    "message": "Contact",
+    "message": "联系",
     "description": "Navbar item with label 联系"
   }
 }

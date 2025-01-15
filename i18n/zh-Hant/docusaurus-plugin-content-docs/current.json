@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.开始": {
+    "message": "开始",
+    "description": "The label for category 开始 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.开始.link.generated-index.description": {
+    "message": "开始学习入门",
+    "description": "The generated-index page description for category 开始 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.专业": {
+    "message": "专业",
+    "description": "The label for category 专业 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.创作者": {
+    "message": "创作者",
+    "description": "The label for category 创作者 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.组织": {
+    "message": "组织",
+    "description": "The label for category 组织 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.商业": {
+    "message": "商业",
+    "description": "The label for category 商业 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.商业.link.generated-index.description": {
+    "message": "面向企业组织、社区组织、创作者",
+    "description": "The generated-index page description for category 商业 in sidebar tutorialSidebar"
+  }
+}
