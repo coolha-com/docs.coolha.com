@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Coolha Docs',
   tagline: '为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务。',
-  favicon: '/logo.png',
+  favicon: '/docs.png',
 
   // Set the production url of your site here
   url: 'https://docs.coolha.com',
@@ -77,7 +77,7 @@ const config: Config = {
       title: '',
       logo: {
         alt: 'Coolha Docs Logo',
-        src: '/logo.png',
+        src: '/docs.png',
       },
       items: [
         
