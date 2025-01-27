@@ -15,4 +15,4 @@ Empower creators, brands, and communities, connect new driving forces of digital
 
 - **[Coolha DApps↗](https://coolha.com)** is an application running on the blockchain network,
 - **[Coolha DAO↗](https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1)** For the governance of Coolha DApps, operated by the community `Coolha Community`
-- **[Coolha Labs↗](https://labs.coolha.com/about_us)** is the main technical service team for developing smart contracts and applications
+- **[Coolha Labs↗](https://labs.coolha.com)** is the main technical service team for developing smart contracts and applications

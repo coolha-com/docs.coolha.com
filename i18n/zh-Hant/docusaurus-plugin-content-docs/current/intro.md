@@ -15,4 +15,4 @@ Coolha 是基于 **[Lens Protocol](https://www.lens.xyz)** 开发的去中心化
 
 - **[Coolha DApps↗](https://coolha.com)** 是运行在区块链网络上的应用程序,
 - **[Coolha DAO↗](https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1)** 用于 Coolha DApps 的治理，由社区 `Coolha Community` 运营
-- **[Coolha Labs↗](https://labs.coolha.com/about_us)** 是开发智能合约和应用程序的主要技术服务团队
+- **[Coolha Labs↗](https://labs.coolha.com)** 是开发智能合约和应用程序的主要技术服务团队
