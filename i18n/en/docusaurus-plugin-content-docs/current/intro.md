@@ -7,7 +7,7 @@ slug: /
 
 ## What is Coolha?
 
-Coolha is a decentralized social application developed based on **[Lens Protocol](https://www.lens.xyz)**, with the help of **[Ethereum](https://ethereum.org/)** The scalable social network **[Lens Chain](https://www.lens.xyz)**, powered by **[ZKsync](https://zksync.io/)** and **[Avail](https://www.availproject.org/)** provides support.
+Coolha is a decentralized social application developed based on **[Lens Protocol](https://onboarding.lens.xyz/)**, with the help of **[Ethereum](https://ethereum.org/)** The scalable social network **[Lens Chain](https://www.lens.xyz)**, powered by **[ZKsync](https://zksync.io/)** and **[Avail](https://www.availproject.org/)** provides support.
 
 Empower creators, brands, and communities, connect new driving forces of digital growth, and provide marketing services in the Web3 world.
 

@@ -18,11 +18,14 @@ cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
 
 启动您的本地化站点
 ```
+npm run start -- --locale en
+```
+```
 npm run start -- --locale zh-Hans
 ```
 
 
-## en
+# en
 
 docs
 ```
@@ -51,7 +54,9 @@ cp -r community/** i18n/en/docusaurus-plugin-content-docs-community/current
  npm run write-translations -- --locale en    
 ```
 
-## zh-Hant
+
+
+# zh-Hant
 
 
 docs

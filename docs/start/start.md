@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 # 必备条件
-## 必备条件
 
 ### 打开应用
 [Open Coolha DApps↗](https://coolha.com)

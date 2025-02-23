@@ -7,7 +7,7 @@ slug: /
 
 ## 什么是 Coolha ?
 
-Coolha 是基于 **[Lens Protocol](https://www.lens.xyz)** 开发的去中心化社交应用，借助 **[以太坊](https://ethereum.org/)** 上的可扩展社交网络 **[Lens Chain](https://www.lens.xyz)** ，由 **[ZKsync](https://zksync.io/)** 和 **[Avail](https://www.availproject.org/)** 提供支持。
+Coolha 是基于 **[Lens Protocol](https://onboarding.lens.xyz/)** 开发的去中心化社交应用，借助 **[以太坊](https://ethereum.org/)** 上的可扩展社交网络 **[Lens Chain](https://www.lens.xyz)** ，由 **[ZKsync](https://zksync.io/)** 和 **[Avail](https://www.availproject.org/)** 提供支持。
 
 为创作者、品牌、社区赋能，连接数字增长新动力，Web3 世界的营销服务。
 
