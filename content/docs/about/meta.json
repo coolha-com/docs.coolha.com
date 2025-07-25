@@ -1,0 +1,17 @@
+{
+  "title": "关于",
+  "description": "关于 Coolha",
+  "root": true,
+  "pages": [
+    "index",
+    "intro",
+    "start",
+    "business",
+    "organize",
+    "professional",
+    "creator",
+    "faq",
+    "glossary",
+    "resources"
+  ]
+}

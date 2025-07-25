@@ -1,0 +1,13 @@
+{
+  "title": "community",
+  "description": "社区资源和贡献",
+  "root": true,
+  "pages": [
+    "index",
+    "code",
+    "participate",
+    "dao",
+    "translate",
+    "feature-requests"
+  ]
+}

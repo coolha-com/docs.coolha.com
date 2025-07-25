@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* 自定义主题色 */
+:root {
+  --color-fd-primary: #a7c31b;
+  --color-fd-primary-foreground: #000000;
+/*   --color-fd-accent: #C0E218;
+  --color-fd-accent-foreground: #000000; */
+}
+
+.dark {
+  --color-fd-primary: #C0E218;
+/*   --color-fd-primary-foreground: #000000;
+  --color-fd-accent: #C0E218;
+  --color-fd-accent-foreground: #000000; */
+}

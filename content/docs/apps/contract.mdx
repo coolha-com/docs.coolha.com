@@ -1,0 +1,365 @@
+---
+title: 智能合约
+description: 查看 Coolha DApp 的智能合约地址和相关信息
+---
+
+# 智能合约
+
+Lens 应用程序是智能合约的一个实例，允许在单个实体下整理不同的 Lens 基元。
+
+## 主要合约地址
+
+### Coolha App 合约
+
+**合约地址**: [`0xe5439696f4057aF073c0FB2dc6e5e755392922e1`](https://block-explorer.testnet.lens.dev/address/0xe5439696f4057aF073c0FB2dc6e5e755392922e1)
+
+- **网络**: Polygon Mumbai Testnet
+- **合约类型**: Lens App Contract
+- **部署时间**: 2024年1月
+- **验证状态**: ✅ 已验证
+
+### 核心协议合约
+
+#### Lens Hub
+
+**合约地址**: `0x4fbffF20302F3326B20052ab9C217C44F6480900`
+
+- **功能**: Lens Protocol 核心合约
+- **网络**: Polygon Mumbai Testnet
+- **作用**: 管理用户 Profile 和内容发布
+
+#### Follow NFT Implementation
+
+**合约地址**: `0x0000000000000000000000000000000000000000`
+
+- **功能**: 关注关系 NFT 实现
+- **网络**: Polygon Mumbai Testnet
+- **作用**: 管理用户之间的关注关系
+
+#### Collect NFT Implementation
+
+**合约地址**: `0x0000000000000000000000000000000000000000`
+
+- **功能**: 收集 NFT 实现
+- **网络**: Polygon Mumbai Testnet
+- **作用**: 管理内容收集功能
+
+## 合约功能
+
+### 📱 应用管理
+
+#### 应用注册
+
+```solidity
+function createApp(
+    address to,
+    CreateAppParams calldata createAppParams
+) external returns (uint256)
+```
+
+**功能**: 创建新的 Lens 应用
+
+**参数**:
+- `to`: 应用所有者地址
+- `createAppParams`: 应用创建参数
+
+#### 应用配置
+
+```solidity
+function setAppMetadataURI(
+    uint256 appId,
+    string calldata metadataURI
+) external
+```
+
+**功能**: 设置应用元数据 URI
+
+**参数**:
+- `appId`: 应用 ID
+- `metadataURI`: 元数据 URI
+
+### 👥 用户管理
+
+#### Profile 创建
+
+```solidity
+function createProfile(
+    CreateProfileParams calldata createProfileParams
+) external returns (uint256)
+```
+
+**功能**: 创建用户 Profile
+
+**参数**:
+- `createProfileParams`: Profile 创建参数
+
+#### Profile 更新
+
+```solidity
+function setProfileMetadataURI(
+    uint256 profileId,
+    string calldata metadataURI
+) external
+```
+
+**功能**: 更新 Profile 元数据
+
+**参数**:
+- `profileId`: Profile ID
+- `metadataURI`: 新的元数据 URI
+
+### 📝 内容管理
+
+#### 发布内容
+
+```solidity
+function post(
+    PostParams calldata postParams
+) external returns (uint256)
+```
+
+**功能**: 发布新内容
+
+**参数**:
+- `postParams`: 发布参数
+
+#### 评论内容
+
+```solidity
+function comment(
+    CommentParams calldata commentParams
+) external returns (uint256)
+```
+
+**功能**: 评论现有内容
+
+**参数**:
+- `commentParams`: 评论参数
+
+#### 转发内容
+
+```solidity
+function mirror(
+    MirrorParams calldata mirrorParams
+) external returns (uint256)
+```
+
+**功能**: 转发现有内容
+
+**参数**:
+- `mirrorParams`: 转发参数
+
+### 🔄 社交互动
+
+#### 关注用户
+
+```solidity
+function follow(
+    uint256 followerProfileId,
+    uint256[] calldata idsOfProfilesToFollow,
+    uint256[] calldata followTokenIds,
+    bytes[] calldata datas
+) external returns (uint256[] memory)
+```
+
+**功能**: 关注其他用户
+
+**参数**:
+- `followerProfileId`: 关注者 Profile ID
+- `idsOfProfilesToFollow`: 被关注者 Profile ID 数组
+- `followTokenIds`: 关注 Token ID 数组
+- `datas`: 附加数据数组
+
+#### 收集内容
+
+```solidity
+function collect(
+    CollectParams calldata collectParams
+) external returns (uint256)
+```
+
+**功能**: 收集喜欢的内容
+
+**参数**:
+- `collectParams`: 收集参数
+
+## 事件定义
+
+### 应用事件
+
+```solidity
+event AppCreated(
+    uint256 indexed appId,
+    address indexed creator,
+    string metadataURI,
+    uint256 timestamp
+);
+
+event AppMetadataUpdated(
+    uint256 indexed appId,
+    string metadataURI,
+    uint256 timestamp
+);
+```
+
+### 内容事件
+
+```solidity
+event PostCreated(
+    uint256 indexed profileId,
+    uint256 indexed pubId,
+    string contentURI,
+    address collectModule,
+    bytes collectModuleReturnData,
+    address referenceModule,
+    bytes referenceModuleReturnData,
+    uint256 timestamp
+);
+
+event CommentCreated(
+    uint256 indexed profileId,
+    uint256 indexed pubId,
+    string contentURI,
+    uint256 indexed profileIdPointed,
+    uint256 pubIdPointed,
+    bytes referenceModuleData,
+    address collectModule,
+    bytes collectModuleReturnData,
+    address referenceModule,
+    bytes referenceModuleReturnData,
+    uint256 timestamp
+);
+```
+
+### 社交事件
+
+```solidity
+event Followed(
+    address indexed follower,
+    uint256[] profileIds,
+    bytes[] followModuleDatas,
+    uint256 timestamp
+);
+
+event Collected(
+    address indexed collector,
+    uint256 indexed profileId,
+    uint256 indexed pubId,
+    uint256 rootProfileId,
+    uint256 rootPubId,
+    bytes collectModuleData,
+    uint256 timestamp
+);
+```
+
+## 安全特性
+
+### 🛡️ 访问控制
+
+#### 权限管理
+
+- **所有者权限**: 只有应用所有者可以修改应用设置
+- **Profile 权限**: 只有 Profile 所有者可以发布内容
+- **模块权限**: 通过模块系统控制功能访问
+
+#### 多重签名
+
+重要操作需要多重签名确认：
+
+- **合约升级**: 需要多个管理员签名
+- **参数修改**: 关键参数修改需要确认
+- **紧急暂停**: 紧急情况下的暂停操作
+
+### 🔒 数据完整性
+
+#### 哈希验证
+
+- **内容哈希**: 验证内容完整性
+- **元数据哈希**: 验证元数据未被篡改
+- **签名验证**: 验证操作者身份
+
+#### 时间戳
+
+- **创建时间**: 记录内容创建时间
+- **修改时间**: 记录最后修改时间
+- **有效期**: 设置内容有效期限
+
+## 升级机制
+
+### 🔄 代理模式
+
+使用代理模式实现合约升级：
+
+- **透明代理**: 保持合约地址不变
+- **逻辑分离**: 逻辑合约可以升级
+- **状态保持**: 升级时保持状态数据
+
+### 📋 升级流程
+
+1. **提案阶段**: 提出升级提案
+2. **审核阶段**: 社区和技术审核
+3. **投票阶段**: DAO 投票决定
+4. **实施阶段**: 执行合约升级
+5. **验证阶段**: 验证升级结果
+
+## 监控和分析
+
+### 📊 链上数据
+
+#### 实时监控
+
+- **交易监控**: 实时监控合约交易
+- **事件监控**: 监控重要事件触发
+- **状态监控**: 监控合约状态变化
+
+#### 数据分析
+
+- **用户活跃度**: 分析用户使用情况
+- **内容统计**: 统计内容发布和互动
+- **性能指标**: 监控合约性能指标
+
+### 🔍 区块链浏览器
+
+#### 查看工具
+
+- **Polygonscan**: 主网合约浏览
+- **Mumbai Explorer**: 测试网合约浏览
+- **Lens Explorer**: Lens 专用浏览器
+
+#### 验证信息
+
+- **合约代码**: 查看验证的合约源码
+- **交易历史**: 查看所有交易记录
+- **事件日志**: 查看事件触发日志
+
+## 开发者资源
+
+### 🛠️ 开发工具
+
+#### SDK 和库
+
+- **Lens SDK**: 官方 JavaScript SDK
+- **React Hooks**: React 集成钩子
+- **GraphQL Client**: GraphQL 查询客户端
+
+#### 测试工具
+
+- **Hardhat**: 智能合约开发框架
+- **Foundry**: 高性能测试框架
+- **Tenderly**: 合约调试和监控
+
+### 📚 文档资源
+
+- **API 文档**: 详细的 API 接口文档
+- **示例代码**: 完整的示例项目
+- **最佳实践**: 开发最佳实践指南
+- **故障排除**: 常见问题解决方案
+
+## 联系我们
+
+如果您对智能合约有任何问题：
+
+- **技术支持**: [dev@coolha.com](mailto:dev@coolha.com)
+- **安全报告**: [security@coolha.com](mailto:security@coolha.com)
+- **GitHub**: [Coolha Smart Contracts](https://github.com/coolha/contracts)
+- **Discord**: 加入 #developers 频道

@@ -1,0 +1,14 @@
+{
+  "title": "Apps",
+  "description": "The description of root folder (optional)",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "index",
+    "how-it-works",
+    "contract",
+    "changelog",
+    "privacy",
+    "terms"
+  ]
+}

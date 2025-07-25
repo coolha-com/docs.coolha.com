@@ -1,0 +1,125 @@
+---
+title: Coolha DApps
+description: 了解 Coolha 去中心化应用的功能、架构和使用方法
+---
+
+# 介绍 Coolha DApps
+
+Coolha DApps 是基于 Lens Protocol 构建的去中心化社交应用，为用户提供完全去中心化的社交体验。
+
+## 什么是 DApp？
+
+Lens 上的应用程序是一个链上实体，具有独特的身份和可自定义的设置。开发人员可以设置描述应用程序的元数据，包括图像和描述，增强其在网络中的存在。应用程序可以指定它们使用的图表，从而有效地定义它们迎合的社交网络或受众。他们还可以通过添加多个 Feed 并设置默认值来管理 Feed，从而允许为其用户量身定制有组织的内容分发。
+
+此外，应用程序可以确定它们使用的命名空间注册表，从而确保其平台内的用户身份一致。管理控制功能强大，可选择添加或删除可调整应用程序设置的管理员。为了提升用户体验，App 可以设置赞助，为用户支付 gas 费用，促进无缝交互。他们还可以与特定社区建立联系，整合社区特征并促进参与。
+
+## 应用元数据
+
+Coolha DApp 的元数据配置：
+
+```js title="AppMetadata.ts"
+import { MetadataAttributeType, app } from "@lens-protocol/metadata";
+
+export const AppMetadata = app({
+  name: "Coolha",
+  description: "Empower creators, brands, and communities, connect new driving forces for digital growth, and provide marketing services in the Web3 world",
+  logo: "lens://d94238064a8603b0e494d5d68d57cd1bd4dd70c18e32df38b11e47fff25ddd19",
+  developer: "Coolha fqa@coolha.com",
+  url: "https://coolha.com",
+  termsOfService: "https://coolha.com/terms",
+  privacyPolicy: "https://coolha.com/privacy",
+  platforms:["web"],
+});
+```
+
+## 核心功能
+
+### 🔗 去中心化身份
+
+- **Lens Profile**: 基于区块链的用户身份
+- **跨平台互通**: 在不同 DApp 间保持身份一致
+- **自主控制**: 用户完全控制自己的数据和身份
+
+### 📱 社交功能
+
+- **发布内容**: 创建帖子、图片、视频等内容
+- **社交互动**: 点赞、评论、转发、收藏
+- **关注系统**: 关注感兴趣的用户和话题
+- **消息通讯**: 私信和群组聊天
+
+### 💰 创作者经济
+
+- **内容变现**: 通过优质内容获得收益
+- **打赏系统**: 支持喜欢的创作者
+- **NFT 集成**: 创建和交易 NFT 作品
+- **代币激励**: 参与获得平台代币奖励
+
+### 🛡️ 隐私安全
+
+- **数据主权**: 用户数据存储在去中心化网络
+- **隐私控制**: 灵活的隐私设置选项
+- **抗审查**: 无法被单一实体审查或删除
+- **透明开放**: 开源代码，公开透明
+
+## 技术架构
+
+### 区块链层
+
+- **Lens Protocol**: 核心社交图谱协议
+- **Polygon Network**: 高性能二层网络
+- **IPFS**: 去中心化内容存储
+- **Arweave**: 永久数据存储
+
+### 应用层
+
+- **React/Next.js**: 现代前端框架
+- **Web3 集成**: 钱包连接和区块链交互
+- **GraphQL API**: 高效的数据查询
+- **PWA 支持**: 渐进式 Web 应用
+
+## 快速开始
+
+<Cards>
+  <Card href="/docs/apps/how-it-works" title="如何运作？" description="了解 Coolha DApp 的工作原理" />
+  <Card href="/docs/apps/contract" title="智能合约" description="查看智能合约地址和信息" />
+  <Card href="/docs/apps/changelog" title="更新日志" description="查看最新的功能更新" />
+  <Card href="/docs/apps/privacy" title="隐私策略" description="了解我们的隐私保护措施" />
+</Cards>
+
+## 开始使用
+
+1. **连接钱包**: 使用 MetaMask 或其他 Web3 钱包
+2. **创建 Profile**: 在 Lens Protocol 上创建个人资料
+3. **完善信息**: 添加头像、简介等个人信息
+4. **开始社交**: 发布内容，关注其他用户
+
+## 支持的钱包
+
+- **MetaMask**: 最流行的浏览器钱包
+- **WalletConnect**: 支持多种移动钱包
+- **Coinbase Wallet**: Coinbase 官方钱包
+- **Rainbow**: 用户友好的移动钱包
+
+## 网络支持
+
+- **Polygon Mainnet**: 主网环境
+- **Polygon Mumbai**: 测试网环境
+- **Ethereum**: 以太坊主网（计划支持）
+
+## 获得帮助
+
+如果您在使用过程中遇到问题：
+
+- **用户指南**: 查看详细的使用教程
+- **常见问题**: 查看 [FAQ](/docs/faq) 页面
+- **社区支持**: 加入 [Discord](https://discord.gg/coolha) 获得帮助
+- **技术支持**: 发送邮件到 [support@coolha.com](mailto:support@coolha.com)
+
+## 开发者资源
+
+- **API 文档**: 查看开发者 API 文档
+- **SDK**: 使用 Coolha SDK 构建应用
+- **开源代码**: 在 [GitHub](https://github.com/coolha) 查看源代码
+- **开发者社区**: 加入开发者讨论群
+
+欢迎体验 Coolha DApps，开启您的 Web3 社交之旅！🚀
