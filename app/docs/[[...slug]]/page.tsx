@@ -30,7 +30,7 @@ export default async function Page(props: {
           })}
         />
         <a
-          href={`https://github.com/fuma-nama/fumadocs/blob/main/content/docs/${page.path}`}
+          href={`https://github.com/coolha-com/docs.coolha.com/blob/main/content/docs/${page.path}`}
           rel="noreferrer noopener"
           target="_blank"
           className="w-fit border rounded-xl p-2 font-medium text-sm text-fd-secondary-foreground bg-fd-secondary transition-colors hover:text-fd-accent-foreground hover:bg-fd-accent"

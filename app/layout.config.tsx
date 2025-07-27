@@ -17,8 +17,8 @@ export const baseOptions: BaseLayoutProps = {
   // see https://fumadocs.dev/docs/ui/navigation/links
   links: [
     { icon: <RiBookOpenLine className='w-4 h-4' />, text: '文档', url: `/docs/about`, secondary: false, active: 'nested-url', },
-    { icon: <RiBloggerLine className='w-4 h-4' />, text: '博客', url: `https://paragraph.com/@coolha`, secondary: false, active: 'nested-url', },
-    { icon: <RiSlideshowLine className='w-4 h-4' />, text: '联系', url: `https://link3.to/coolha`, secondary: false, active: 'nested-url', },
+    { icon: <RiBloggerLine className='w-4 h-4' />, text: '博客↗', url: `https://paragraph.com/@coolha`, secondary: false, active: 'nested-url', },
+    { icon: <RiSlideshowLine className='w-4 h-4' />, text: '联系↗', url: `https://link3.to/coolha`, secondary: false, active: 'nested-url', },
 
     /*     {
           type: 'menu',
@@ -36,6 +36,6 @@ export const baseOptions: BaseLayoutProps = {
     languages: i18n.languages,
     defaultLanguage: i18n.defaultLanguage,
   }, */
-  /* githubUrl: 'https://github.com', */
+  githubUrl: 'https://github.com/coolha-com/docs.coolha.com',
 
 };
